@@ -1,0 +1,2 @@
+# anime-deserve-suffering-map
+关于动漫人物的痛苦以及其是否活该的度量问题
