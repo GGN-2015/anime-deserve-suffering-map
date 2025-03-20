@@ -28,8 +28,12 @@ if __name__ == "__main__":
     cnt = 0
     for s in range(5, 101, 5):
         for d in range(5, 101, 5):
+            name_file = os.path.join("images", "s%03dd%03d" % (s, d), "name-anime.txt")
             if (name_anime := get_text_by_sd(s, d)) != "":
                 cnt += 1
-                with open(os.path.join("images", "s%03dd%03d" % (s, d), "name-anime.txt"), "w", encoding="utf-8") as fp:
+                with open(name_file, "w", encoding="utf-8") as fp:
                     fp.write(name_anime)
+            else:
+                if os.path.isfile(name_file):
+                    os.remove(name_file)
     print("total known: %d" % cnt)
