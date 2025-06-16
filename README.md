@@ -11,3 +11,9 @@
 
 1. 将在线文档的表格内容直接拷贝到 [now-known.txt](./now-known.txt)
 2. 在有 python3 和 pillow 的环境下运行 [build.sh](./build.sh)
+
+## 查询名字
+
+```bash
+python3 get_name.py s<SUFFER>d<DESERVE>
+```
